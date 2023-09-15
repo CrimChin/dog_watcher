@@ -1,0 +1,38 @@
+[0.530s] Invoking command in '/home/chinedu/dog_watcher/src/cam_hardware': PYTHONPATH=/home/chinedu/dog_watcher/build/cam_hardware/prefix_override:/home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/cam_hardware build --build-base /home/chinedu/dog_watcher/build/cam_hardware/build install --record /home/chinedu/dog_watcher/build/cam_hardware/install.log --single-version-externally-managed
+[0.724s] running egg_info
+[0.725s] creating ../../build/cam_hardware/cam_hardware.egg-info
+[0.725s] writing ../../build/cam_hardware/cam_hardware.egg-info/PKG-INFO
+[0.725s] writing dependency_links to ../../build/cam_hardware/cam_hardware.egg-info/dependency_links.txt
+[0.725s] writing entry points to ../../build/cam_hardware/cam_hardware.egg-info/entry_points.txt
+[0.725s] writing requirements to ../../build/cam_hardware/cam_hardware.egg-info/requires.txt
+[0.725s] writing top-level names to ../../build/cam_hardware/cam_hardware.egg-info/top_level.txt
+[0.725s] writing manifest file '../../build/cam_hardware/cam_hardware.egg-info/SOURCES.txt'
+[0.726s] reading manifest file '../../build/cam_hardware/cam_hardware.egg-info/SOURCES.txt'
+[0.727s] writing manifest file '../../build/cam_hardware/cam_hardware.egg-info/SOURCES.txt'
+[0.727s] running build
+[0.727s] running build_py
+[0.727s] creating /home/chinedu/dog_watcher/build/cam_hardware/build
+[0.727s] creating /home/chinedu/dog_watcher/build/cam_hardware/build/lib
+[0.727s] creating /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware
+[0.727s] copying cam_hardware/image_pub.py -> /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware
+[0.728s] copying cam_hardware/__init__.py -> /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware
+[0.728s] running install
+[0.730s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.730s]   warnings.warn(
+[0.730s] running install_lib
+[0.731s] creating /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware
+[0.731s] copying /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware/image_pub.py -> /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware
+[0.731s] copying /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware/__init__.py -> /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware
+[0.731s] byte-compiling /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/image_pub.py to image_pub.cpython-310.pyc
+[0.732s] byte-compiling /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/__init__.py to __init__.cpython-310.pyc
+[0.732s] running install_data
+[0.732s] creating /home/chinedu/dog_watcher/install/cam_hardware/share/ament_index
+[0.732s] creating /home/chinedu/dog_watcher/install/cam_hardware/share/ament_index/resource_index
+[0.732s] creating /home/chinedu/dog_watcher/install/cam_hardware/share/ament_index/resource_index/packages
+[0.732s] copying resource/cam_hardware -> /home/chinedu/dog_watcher/install/cam_hardware/share/ament_index/resource_index/packages
+[0.732s] copying package.xml -> /home/chinedu/dog_watcher/install/cam_hardware/share/cam_hardware
+[0.732s] running install_egg_info
+[0.734s] Copying ../../build/cam_hardware/cam_hardware.egg-info to /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware-0.0.0-py3.10.egg-info
+[0.734s] running install_scripts
+[0.750s] writing list of installed files to '/home/chinedu/dog_watcher/build/cam_hardware/install.log'
+[0.766s] Invoked command in '/home/chinedu/dog_watcher/src/cam_hardware' returned '0': PYTHONPATH=/home/chinedu/dog_watcher/build/cam_hardware/prefix_override:/home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/cam_hardware build --build-base /home/chinedu/dog_watcher/build/cam_hardware/build install --record /home/chinedu/dog_watcher/build/cam_hardware/install.log --single-version-externally-managed
