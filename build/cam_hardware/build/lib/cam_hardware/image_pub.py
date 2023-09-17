@@ -10,6 +10,9 @@ class ImagePublisher(Node):
         super().__init__("image_publisher")
         self.bridge = CvBridge()
         self.cap = cv2.VideoCapture(0)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH,640)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
+        
         self.pub = self.create_publisher(Image, "/image", 10)
         self.bgr8pub = self.create_publisher(Image, "/image/bgr", 10)
 

@@ -11,6 +11,7 @@ setup.py
 cam_hardware/__init__.py
 cam_hardware/image_processing.py
 cam_hardware/image_pub.py
+cam_hardware/utils.py
 resource/cam_hardware
 test/test_copyright.py
 test/test_flake8.py

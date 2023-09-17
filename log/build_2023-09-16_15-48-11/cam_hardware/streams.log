@@ -1,0 +1,38 @@
+[0.632s] Invoking command in '/home/chinedu/dog_watcher/src/cam_hardware': PYTHONPATH=/home/chinedu/dog_watcher/build/cam_hardware/prefix_override:/home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/cam_hardware build --build-base /home/chinedu/dog_watcher/build/cam_hardware/build install --record /home/chinedu/dog_watcher/build/cam_hardware/install.log --single-version-externally-managed
+[0.812s] running egg_info
+[0.826s] writing ../../build/cam_hardware/cam_hardware.egg-info/PKG-INFO
+[0.827s] writing dependency_links to ../../build/cam_hardware/cam_hardware.egg-info/dependency_links.txt
+[0.827s] writing entry points to ../../build/cam_hardware/cam_hardware.egg-info/entry_points.txt
+[0.827s] writing requirements to ../../build/cam_hardware/cam_hardware.egg-info/requires.txt
+[0.827s] writing top-level names to ../../build/cam_hardware/cam_hardware.egg-info/top_level.txt
+[0.855s] reading manifest file '../../build/cam_hardware/cam_hardware.egg-info/SOURCES.txt'
+[0.856s] writing manifest file '../../build/cam_hardware/cam_hardware.egg-info/SOURCES.txt'
+[0.856s] running build
+[0.856s] running build_py
+[0.856s] copying cam_hardware/image_processing.py -> /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware
+[0.856s] running install
+[0.857s] /home/chinedu/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[0.857s] !!
+[0.857s] 
+[0.857s]         ********************************************************************************
+[0.857s]         Please avoid running ``setup.py`` directly.
+[0.857s]         Instead, use pypa/build, pypa/installer or other
+[0.857s]         standards-based tools.
+[0.857s] 
+[0.858s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[0.858s]         ********************************************************************************
+[0.858s] 
+[0.858s] !!
+[0.858s]   self.initialize_options()
+[0.861s] running install_lib
+[0.875s] copying /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware/image_processing.py -> /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware
+[0.875s] byte-compiling /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/image_processing.py to image_processing.cpython-310.pyc
+[0.876s] running install_data
+[0.889s] running install_egg_info
+[0.903s] removing '/home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware-0.0.0-py3.10.egg-info' (and everything under it)
+[0.903s] Copying ../../build/cam_hardware/cam_hardware.egg-info to /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware-0.0.0-py3.10.egg-info
+[0.904s] running install_scripts
+[1.030s] Installing image_processer script to /home/chinedu/dog_watcher/install/cam_hardware/lib/cam_hardware
+[1.030s] Installing image_pub script to /home/chinedu/dog_watcher/install/cam_hardware/lib/cam_hardware
+[1.030s] writing list of installed files to '/home/chinedu/dog_watcher/build/cam_hardware/install.log'
+[1.048s] Invoked command in '/home/chinedu/dog_watcher/src/cam_hardware' returned '0': PYTHONPATH=/home/chinedu/dog_watcher/build/cam_hardware/prefix_override:/home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/cam_hardware build --build-base /home/chinedu/dog_watcher/build/cam_hardware/build install --record /home/chinedu/dog_watcher/build/cam_hardware/install.log --single-version-externally-managed

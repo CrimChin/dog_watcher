@@ -1,8 +1,10 @@
 /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/image_processing.py
 /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/image_pub.py
+/home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/utils.py
 /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/__init__.py
 /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/__pycache__/image_processing.cpython-310.pyc
 /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/__pycache__/image_pub.cpython-310.pyc
+/home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/__pycache__/utils.cpython-310.pyc
 /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/__pycache__/__init__.cpython-310.pyc
 /home/chinedu/dog_watcher/install/cam_hardware/share/ament_index/resource_index/packages/cam_hardware
 /home/chinedu/dog_watcher/install/cam_hardware/share/cam_hardware/package.xml

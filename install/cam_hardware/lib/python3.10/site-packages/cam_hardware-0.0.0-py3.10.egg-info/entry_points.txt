@@ -1,4 +1,3 @@
 [console_scripts]
 image_processer = cam_hardware.image_processing:main
 image_pub = cam_hardware.image_pub:main
-

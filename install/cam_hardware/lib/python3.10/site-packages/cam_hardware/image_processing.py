@@ -1,25 +1,30 @@
 #!/usr/bin/python3
+
 from typing import List
 import rclpy
 from rclpy.context import Context
 from rclpy.node import Node
 import cv2
-from rclpy.parameter import Parameter
+import numpy as np
+from cam_hardware.utils import plot_bboxes
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
+from ultralytics import YOLO
 
 class ImageProcessing(Node):
     def __init__(self):
         super().__init__("image_processing")
         self.bridge = CvBridge()
         self.sub = self.create_subscription(Image, "/image", self.listener_callback,10)
+        self.model = YOLO("runs/detect/train9/weights/best.onnx")
     
     def listener_callback(self, msg):
         try:
             img_msg = self.bridge.imgmsg_to_cv2(msg)
-            self.get_logger().info(f'I heard {img_msg}')
+            results = self.model.predict(source=img_msg, show=True)
+
         except CvBridgeError as e:
-            print(e)
+            print(f"THIS IS ERROR: {e}")
             
 
 def main(args=None):

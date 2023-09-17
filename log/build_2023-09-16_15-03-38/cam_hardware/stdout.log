@@ -1,0 +1,29 @@
+running egg_info
+writing ../../build/cam_hardware/cam_hardware.egg-info/PKG-INFO
+writing dependency_links to ../../build/cam_hardware/cam_hardware.egg-info/dependency_links.txt
+writing entry points to ../../build/cam_hardware/cam_hardware.egg-info/entry_points.txt
+writing requirements to ../../build/cam_hardware/cam_hardware.egg-info/requires.txt
+writing top-level names to ../../build/cam_hardware/cam_hardware.egg-info/top_level.txt
+reading manifest file '../../build/cam_hardware/cam_hardware.egg-info/SOURCES.txt'
+writing manifest file '../../build/cam_hardware/cam_hardware.egg-info/SOURCES.txt'
+running build
+running build_py
+copying cam_hardware/image_processing.py -> /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware
+copying cam_hardware/image_pub.py -> /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware
+copying cam_hardware/utils.py -> /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware
+running install
+running install_lib
+copying /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware/image_processing.py -> /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware
+copying /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware/image_pub.py -> /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware
+copying /home/chinedu/dog_watcher/build/cam_hardware/build/lib/cam_hardware/utils.py -> /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware
+byte-compiling /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/image_processing.py to image_processing.cpython-310.pyc
+byte-compiling /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/image_pub.py to image_pub.cpython-310.pyc
+byte-compiling /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware/utils.py to utils.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/cam_hardware/cam_hardware.egg-info to /home/chinedu/dog_watcher/install/cam_hardware/lib/python3.10/site-packages/cam_hardware-0.0.0-py3.10.egg-info
+running install_scripts
+Installing image_processer script to /home/chinedu/dog_watcher/install/cam_hardware/lib/cam_hardware
+Installing image_pub script to /home/chinedu/dog_watcher/install/cam_hardware/lib/cam_hardware
+writing list of installed files to '/home/chinedu/dog_watcher/build/cam_hardware/install.log'
