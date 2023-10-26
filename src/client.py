@@ -1,4 +1,7 @@
-import socket,cv2, pickle,struct
+import socket
+import cv2
+import pickle
+import struct
 
 class WebClient():
     def __init__(self) -> None:
