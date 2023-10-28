@@ -1,4 +1,4 @@
-import cv2 
+import cv2
 
 def box_label(images, box, label='', color=(128, 128, 128), txt_color=(255, 255, 255)):
     for image in images:
