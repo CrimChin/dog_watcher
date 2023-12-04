@@ -1,74 +1,61 @@
-from typing import List
+#!/usr/bin/env python
+
+from importlib import import_module
+import os
 import rclpy
+import cv2
 from rclpy.context import Context
 from rclpy.node import Node
-import cv2 
-import imutils 
-import socket
-import numpy as np
-import time
-import base64
-
+from flask import Flask, render_template, Response
+import signal, sys
+from threading import Thread, Event
 from rclpy.parameter import Parameter
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 
-BUFF_SIZE = 65536
-
 class ServerSocket(Node):
+    app = Flask(__name__)
+    frame = None # Global variable frame (the holy image)
+
+    # Objects of cvbridge and event
+   
     def __init__(self):
         super().__init__("ServerSocket")
-       
-        self.server_socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-        self.server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_RCVBUF,BUFF_SIZE)
-        host_name = socket.gethostname()
-        host_ip = socket.gethostbyname(host_name)
-        port = 9999
-        self.socket_address = (host_ip,port)
-        self.server_socket.bind(self.socket_address)
-        print('Listening at:',self.socket_address)
-
-        self.create_subscription(Image, "/model_image",self.stream_video,10)
+        self.sub = self.create_subscription(Image, "/model_image",self.get_frame,10)
         self.bridge = CvBridge()
-    
-    def stream_video(self,msg):
-        vid = self.bridge.imgmsg_to_cv2(msg) 
-        fps,st,frames_to_count,cnt = (0,0,20,0)
+        self.event = Event()
+        self.event.set()
 
+    def get_frame(self,msg):
+        rclpy.spin_once(timeout_sec=1.0)
+        self.cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding = "passthrough")
+        frame = cv2.imencode(".jpg",self.cv_image)[1].tobytes()
+        self.event.wait()
+        self.event.clear()
+        return frame
+
+    @app.route('/')
+    def index(self):
+        """Video streaming home page."""
+        return render_template('index.html')
+
+
+    def gen_frames(self, camera):
+        """Video streaming generator function."""
+        yield b'--frame\r\n'
         while True:
-            self.get_logger().info("IN THE LOOP")
-            gram,client_addr = self.server_socket.recvfrom(BUFF_SIZE)
-            self.get_logger().info('GOT connection from ',client_addr)
-            WIDTH=400
-            while True:
-                _,frame = vid.read()
-                frame = imutils.resize(frame,width=WIDTH)
-                encoded,buffer = cv2.imencode('.jpg',frame,[cv2.IMWRITE_JPEG_QUALITY,80])
-                message = base64.b64encode(buffer)
-                self.server_socket.sendto(message,client_addr)
-                frame = cv2.putText(frame,'FPS: '+str(fps),(10,40),cv2.FONT_HERSHEY_SIMPLEX,0.7,(0,0,255),2)
-                cv2.imshow("Transmitting Frame", frame)
-                key = cv2.waitKey(1) & 0xFF
-                if key == ord('q'):
-                    self.server_socket.close()
-                    break
-                if cnt == frames_to_count:
-                    try:
-                        fps = round(frames_to_count/(time.time()-st))
-                        st=time.time()
-                        cnt=0
-                    except:
-                        pass
-                cnt+=1
+            frame = self.get_frame()
+            yield b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n--frame\r\n'
 
-def main(args=None):
-    rclpy.init(args=args)
 
-    server = ServerSocket()
-    rclpy.spin(server)
+    @app.route('/video_feed')
+    def video_feed(self):
+        """Video streaming route. Put this in the src attribute of an img tag."""
+        return Response(self.gen(),
+                        mimetype='multipart/x-mixed-replace; boundary=frame')
+    def signal_handler(self, signal, frame):
+        rclpy.shutdown()
+        sys.exit(0)
 
-    server.destroy_node()
-    rclpy.shutdown()
-
-if __name__ == '__main__':
-    main()
+    if __name__ == '__main__':
+        app.run(host='0.0.0.0', threaded=True, debug = True)
