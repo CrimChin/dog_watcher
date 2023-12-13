@@ -53,6 +53,7 @@ class ServerSocket(Node):
         """Video streaming route. Put this in the src attribute of an img tag."""
         return Response(self.gen(),
                         mimetype='multipart/x-mixed-replace; boundary=frame')
+    
     def signal_handler(self, signal, frame):
         rclpy.shutdown()
         sys.exit(0)
